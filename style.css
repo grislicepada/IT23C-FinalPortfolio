@@ -1,0 +1,132 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #0c0c0c, #7ba88d);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  background-color: rgba(102, 69, 69, 0.2);
+  padding: 1%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+header {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 1% 0;
+  padding: 2%;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+header .back {
+  position: absolute;
+  left: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-decoration: none;
+  color: black;
+  background-color: rgba(136, 225, 250, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+header .back:hover {
+  background-color: rgba(136, 225, 250, 1);
+}
+
+main {
+  background-image: url('profile.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  min-height: 100vh;
+  margin: 1% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 10px;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
+}
+
+.content a {
+  display: block;
+  width: 60%;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  margin: 15px 0;
+  padding: 20px 0;
+  border-radius: 12px;
+  transition: 0.3s ease;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  font-size: 1.1rem;
+}
+
+.content a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 1%;
+  margin: 1% 0;
+}
+
+footer p {
+  color: black;
+  text-align: center;
+  margin: 0.3em 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 95%;
+  }
+
+  .content a {
+    width: 80%;
+    font-size: 1rem;
+    padding: 15px 0;
+  }
+
+  header .back {
+    position: static;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+}
